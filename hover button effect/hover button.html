@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Button Effect</title>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        section{
+            display: flex;
+            align-items: center;
+            justify-content:space-around;
+            flex-wrap:wrap;
+            min-height: 100vh;
+            background-color: black;
+        }
+        a{
+            position:relative;
+            min-width: 120px;
+            background-color: rgb(17, 17, 17);
+            min-height: 35px;
+            align-items: center;
+            padding: 4px 20px;
+        }
+        a span{
+            position: absolute;
+            text-decoration: none;
+            text-transform: capitalize;
+            font-size: 1.5rem;
+            margin: 2px 6px;
+        }
+        a::before{
+            content: "";
+            position: absolute;
+            left: 0%;
+            top: 0%;
+            height: 100%;
+            background-color: tomato;
+            width: 5px;
+            transition: all 0.5s ease-in-out;
+        }
+        a::after{
+            content: "";
+            position: absolute;
+            right: 0%;
+            top: 0%;
+            height: 100%;
+            background-color: tomato;
+            width: 5px;
+            transition: all 0.5s ease-in-out;
+        }
+        a:hover::before,a:hover::after {
+            width: 50%;
+        }
+        a span{
+            position: absolute;
+            z-index: 1;
+            color: whitesmoke;
+            transition: 0.5s;
+            overflow: hidden;
+        }
+        a span:nth-child(2)
+        {
+            display: none;
+            transition-delay: 0.5s;
+        }
+        a:hover span:nth-child(2)
+        {
+            display: block; 
+            animation: bigtosmall 0.2s ease-in-out 0.5s ;
+            overflow: hidden;
+            color: black;
+        }
+        /* a span:nth-child(1)
+        {
+            transition-delay: 0.2s;
+        } */
+        a:hover span:nth-child(1)
+        {
+            transform: scale(0);
+        }
+        
+        @keyframes bigtosmall{
+            0%{
+                transform: scale(1.6);
+                display: block;
+            }
+            100%{
+                transform: scale(1);
+                display: block;
+            }
+        }
+
+
+        /* color giving */
+        a:nth-child(2)::after,a:nth-child(2)::before
+        {
+           background-color: aqua;
+        }
+        a:nth-child(3)::after,a:nth-child(3)::before
+        {
+           background-color:greenyellow;
+        }
+        a:nth-child(4)::after,a:nth-child(4)::before
+        {
+           background-color:snow
+        }
+        a:nth-child(5)::after,a:nth-child(5)::before
+        {
+           background-color:magenta;
+        }
+        a:nth-child(6)::after,a:nth-child(6)::before
+        {
+           background-color:lightskyblue;
+           
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <section>
+        
+            <a href="http://">
+                <span>Hover Me</span>
+                <span>Hover Me</span>
+            </a>
+            <span>Hover Me</span>
+        
+            <a href="http://">
+                <span>Hover Me</span>
+                <span>Hover Me</span>
+            </a>
+
+            <a href="http://">
+                <span>Hover Me</span>
+                <span>Hover Me</span>
+            </a>
+
+            <a href="http://">
+                <span>Hover Me</span>
+                <span>Hover Me</span>
+            </a>
+        
+            <a href="http://">
+                <span>Hover Me</span>
+                <span>Hover Me</span>
+            </a>
+
+            <a href="http://">
+                <span>Hover Me</span>
+                <span>Hover Me</span>
+            </a>
+    </section>
+</body>
+</html>

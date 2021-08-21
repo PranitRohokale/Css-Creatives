@@ -1,0 +1,102 @@
+*{
+    margin: 0%;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+.container .row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .card{
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /* overflow: hidden; */
+    width: 22rem;
+    height: 400px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px grey;
+    margin: 20px 15px;
+}
+.container .card .img-box{
+    position: relative;
+}
+/* .container .card .img-box div{
+    position: absolute;
+    min-width: 100px;
+    min-height: 100px;
+    border-radius: 50%;
+    background: linear-gradient(90deg,pink,aqua);
+    z-index: ;
+} */
+.container .card .img-box img
+{
+    width: 4rem;
+    position: relative;
+    top: -32px;
+    transition: all 0.5s ease;
+    border-radius: 5px;
+    box-shadow: 2px 2px 8px grey;
+}
+.container .card :hover img{
+    width: 6rem;
+    position: relative;
+    top: -20px;
+    transform: translateZ(45deg) rotateX(-45deg);
+}
+
+.container .card .content-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+}
+.container .card .content-box h2{
+    margin-bottom: 10px;
+    letter-spacing: 1.5px;
+    color:red;
+}
+.container .card .content-box h4{
+    margin: 5px 0 10px 0;
+}
+.container .card .content-box p{
+    margin: 5px 0 10px 10px;
+    align-content: center;
+    text-align: center;
+}
+.container .card .content-box button{
+    margin: 10px 0;
+    width: 100px;
+    height: 30px;
+    border-radius: 2px;
+    outline: none;
+    border: none;
+    font-size: 1.2rem;
+    padding: 4px 8px;
+    box-shadow: 0 0 5px rgb(253, 138, 117),2px 2px 5px rgb(253, 138, 117),4px 4px 15px grey;
+    background-color:tomato;
+}
+.container .card .content-box button:hover,.container .card .content-box button:active{
+    background-color:greenyellow;
+    box-shadow: 0 0 5px greenyellow,2px 2px 5px greenyellow,4px 4px 15px grey;
+
+}
+.container .card .content-box button:active{
+    opacity: 0.8;
+}
+
