@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy New Year</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section onmouseover="stars();" class=".ppp">
+        <div class="box1">
+            <div class="box2">
+                <div class="box3">
+                    <h2><span>Happy New Year</span></h2>
+                    <h1><span>2021</span></h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        let i=0;
+        const sec=document.querySelector(".ppp")
+        function stars(){
+            while(i<200)
+            {
+                let obj =document.createElement("i");
+            let x=Math.floor(Math.random()*window.innerWidth);
+            let y=Math.floor(Math.random()*window.innerHeight);
+
+            let size=Math.random()*4;
+            obj.style.left=x +"px";
+            obj.style.top=y+"px";
+            obj.style.width=1+size+"px";
+            obj.style.height=1+size+"px";
+            i++;
+            document.body.appendChild(obj);
+            console.log(i);
+            }
+        };
+        stars();
+        console.log(i);
+    </script>
+</body>
+</html>

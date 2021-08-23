@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background vertivcal animation</title>
+    <link rel="stylesheet" href="style 1.css">
+</head>
+<body>
+    <section>
+        <h2>Big DreamCity</h2>
+        <div class="banner">
+            <div class="block"></div>
+        </div>
+    </section>
+    <script>
+        let banner = document.getElementsByClassName("banner")[0];
+        let block  = document.getElementsByClassName("block");
+
+        for(let i=0;i<500;i++)
+        {
+            banner.innerHTML += '<div class="block"></div>';
+            block[i].style.animationDuration = i * 0.06 +'s';
+            block[i].style.animationDelay =  i * 0.04 + 's';
+        }
+
+        setTimeout(function(e=document.querySelector("section")){
+            e.classList.add("rem ove");
+        },14000);
+    </script>
+</body>
+</html>

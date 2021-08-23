@@ -1,0 +1,86 @@
+body{
+    margin: 0;
+    top: 0%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+section{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:black;
+}
+section .box1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 700px;
+    height: 700px;
+    background-color: blanchedalmond;
+    border-radius: 50%;
+}
+section .box2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 685px;
+    height: 685px;
+    background-color:red;
+    border-radius: 50%;
+}
+section .box3{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    flex-direction: column;
+    width: 500px;
+    height: 500px;
+    background-color: black;
+    border-radius: 50%;
+    animation: spinner 10s ease;
+}
+section .box3 h2,section .box3 h1{
+    font-size: 6em;
+    font-weight: bolder;
+    transform: skewX(-27deg);
+    animation: spinner 2s ease ;
+    text-align: center;
+    color: white;
+    text-shadow: 0 0 5px #cccccc,
+    1px 1px 2px #cccccc,
+    2px 2px 2px #cccccc,
+    3px 3px 2px #cccccc,
+    4px 4px 2px #cccccc;
+    animation: downup 5s linear infinite 10s ;
+}
+section .box3 h1{
+    position: relative;
+    bottom: 120px;
+    font-size: 8em;
+}
+@keyframes spinner{
+    0%{
+        transform: skewX(0deg);
+    }
+    50%{
+        transform: skewX(180deg);
+    }
+    100%{
+        transform: skewX(-27deg);
+    }
+
+}
+@keyframes downup{
+    0%,100%{
+        transform: skewX(0deg);
+    }
+    50%{
+        transform: skewX(180deg);
+    }
+}
+i{
+    
+    background-color: black;
+}

@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+
+}
+section{
+    position: relative;
+    top: 0;
+    left: 0;
+    background-color: rgb(231, 142, 243);
+    height: 100vh;
+    width: 100%;
+    transform-style: preserve-3d;
+    perspective: 500px;
+    overflow: hidden;
+}
+section h2{
+    font-size: 10vw;
+    position: relative;
+    text-align: center;
+    line-height: 100vh;
+    width: 100%;
+    font-weight: 900;
+}
+
+.banner{
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    top: 0%;
+    left: 0;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+.banner .block{
+    position: relative;
+    width: 10vw;
+    height: 10vh;
+    background-color:transparent;
+    display: block;
+    animation: animation 1s ease-in-out 1s forwards;
+}
+@keyframes animation{
+    0%{
+        opacity: 0;
+        transform: translateY(800px) scale(0);
+        background: url("city.jpg");
+        background-attachment: fixed;
+        background-position : center;
+        background-size:cover; 
+    }
+    50%{
+        opacity: 1;
+        transform: translateY(400px) scale(0.5);
+        background: url("city.jpg");
+        background-attachment: fixed;
+        background-position : center;
+        background-size:cover; 
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+        background: url("city.jpg");
+        background-attachment: fixed;
+        background-position : center;
+        background-size:cover ; 
+    }
+}
+.banner .block:nth-child(even)
+{
+    animation: animation 1s ease-in-out 1s forwards;
+    /* background-color: aquamarine; */
+}
+.banner .block:nth-child(7n+1)
+{
+    animation: animation 2.5s ease-in-out 25s forwards;
+    /* background-color: black; */
+}
+.banner .block:nth-child(7n+7)
+{
+    animation: animation 1.5s ease-in-out 1.5s forwards;
+    /* background-color: blue; */
+}
+/* .remove .banner .block{
+    animation: zanimationreverse 5s ease-in forwards;
+}
+@keyframes zanimationreverse{
+    0%{
+        transform: translateZ(0px) rotateX(40deg);
+        background: url("city.jpg");
+        background-attachment: fixed;
+        background-position : center;
+        background-size:cover;
+        /* box-shadow: 0 4px 0px grey; */
+    }
+    100%{
+        transform: translateZ(2000px) rotateX(-40deg); 
+        background: url("city.jpg");
+        background-attachment: fixed;
+        background-position : center;
+        background-size:cover;
+        /* box-shadow: 0 4px 8px grey; */
+    }
+} */
