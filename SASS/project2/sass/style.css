@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.banner {
+  background: -webkit-gradient(linear, left bottom, left top, from(#753f3f), to(transparent)), url("https://media.geeksforgeeks.org/wp-content/cdn-uploads/2009/06/tree12.gif");
+  background: linear-gradient(to top, #753f3f, transparent), url("https://media.geeksforgeeks.org/wp-content/cdn-uploads/2009/06/tree12.gif");
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.banner :last-child {
+  display: inline-block;
+  padding: 5px 15px;
+  font-size: 32px;
+  background-color: black;
+  color: #fff;
+  font-weight: 400;
+}
+/*# sourceMappingURL=style.css.map */

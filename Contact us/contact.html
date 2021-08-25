@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>contact us</title>
+</head>
+<body>
+    <div class="container">
+        <h2 data-0-top="opacity:0;left:100px;" data-200-top="opacity:1;left:0px;">Contact Us</h2>
+        <div class="inner">
+            <input type="text" id="text" name="name" autocomplete="off" required>
+            <span class="containt">Name</span>
+        </div>
+        <div class="inner"> 
+            <input type="email" name="Email" autocomplete="off" required>
+            <span class="containt">Email</span>
+        </div>
+        <div class="inner">
+            <input type="password" name="password" autocomplete="off" required>
+            <span class="containt">Password</span>
+        </div>
+        <div class="inner">
+            <input type="number" pattern="[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]" name="phone" autocomplete="off" required>
+            <span class="containt">Phone</span>
+        </div>
+    </div>
+    
+    <div class="container">
+        <h2 data-0-top="opacity:0;left:100px;" data-200-top="opacity:1;left:0px;">Contact Us</h2>
+        <div class="inner">
+            <input type="text" onkeyup="valuer(this);" name="name" autocomplete="off">
+            <label for="name" >
+                <span class="containt">Name</span>
+            </label>
+        </div>
+        <div class="inner">
+            <input type="email" name="Email" autocomplete="off">
+            <label for="Email" >
+                <span class="containt">Email</span>
+            </label>
+        </div>
+        <div class="inner">
+            <input type="password" name="password" autocomplete="off">
+            <label for="password" >
+                <span class="containt">Password</span>
+            </label>
+        </div>
+        <div class="inner">
+            <input type="tel" pattern="[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]" name="phone" autocomplete="off">
+            <label for="phone" >
+                <span class="containt">Phone</span>
+            </label>
+        </div>
+    </div>
+    <script>
+        const input = document.querySelector(".inner #text");
+        // window.alert(input.nodeValue);
+        input.addEventListener("keyup",(e)=>{
+            console.log(e.value);
+        });
+    </script>
+    
+</body>
+</html>

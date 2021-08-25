@@ -1,0 +1,100 @@
+$colors: (
+    primary: #4bcffa,
+    accent : #34e7e4,
+    font : whitesmoke,
+    lightaccent : #6efa4b,
+    black : black,
+);
+$fontsizes:(
+    font0 : 10px,
+    font1 : 16px,
+    font2 : 22px,
+    font3 : 26px,
+    font4 : 32px,
+);
+//functions
+@function fontsize($size)
+{
+    @return map-get($map: $fontsizes, $key: $size);
+}
+@function color($colorName)
+{
+    @return map-get($map: $colors, $key: $colorName);
+}
+*{
+    margin: 0;
+    padding: 0%;
+}
+body{
+    // background-color: color(primary);
+    color: color(font);
+    width: 100%;
+    height: 100%;
+}
+body{
+    .container{
+        background: color(primary);
+        clip-path: polygon(0 0, 100% 0, 100% 60%, 0 100%);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: -1;
+    }
+}
+header{
+    a{
+        text-decoration: none;
+        font-weight: 400;
+        text-align: center;
+        display: block;
+        margin: fontsize(font1)  !important;
+        font-size: fontsize(font3);
+        color: color(font);
+    }
+}
+main{
+    #mainimage{
+        display: inline-block;
+        text-align: center;
+        img{
+            color: color(font);
+            border: fontsize(font1) solid color(lightaccent);
+            border-radius: 10px;
+            padding: 5px;
+        }
+    }
+    #mainbtn{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-row-gap: fontsize(font0);
+        justify-content: space-evenly;
+        justify-items: center;
+        h1{
+            text-transform: capitalize;
+            color: color(black);
+            font-size: fontsize(font4)
+        }
+        p{
+            font-size: fontsize(font2);
+            letter-spacing: 1.2px;
+            font-weight: 500;
+        }
+        div{
+            width: auto;
+            height: auto;
+            background: color(primary);
+        }
+        div a{
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: fontsize(font2);
+            border: 2px solid color(font);
+            border-radius: 5px;
+            padding: fontsize(font0);
+            letter-spacing: 1.2px;
+            color: color(font);
+        }
+        
+    }
+}

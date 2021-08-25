@@ -1,0 +1,5 @@
+@mixin background($loc) {
+    background : linear-gradient(to top,rgb(117, 63, 63),transparent) ,url($loc);
+    background-size: cover;
+    background-position: center center;
+}
