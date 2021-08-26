@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3d effect</title>
+    <link rel="stylesheet" href="./3d style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="img">
+                <img src="./nature5.jpg" alt="picture">
+            </div>
+            <div class="content">
+                <h2>heading here</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Itaque asperiores quasi exercitationem, deserunt odio duc
+                    imus! Sunt ipsum vel nihil sint.
+                </p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="img">
+                <img src="./nature5.jpg" alt="picture">
+            </div>
+            <div class="content">
+                <h2>heading here</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Itaque asperiores quasi exercitationem, deserunt odio duc
+                    imus! Sunt ipsum vel nihil sint.
+                </p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="img">
+                <img src="./nature5.jpg" alt="picture">
+            </div>
+            <div class="content">
+                <h2>heading here</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Itaque asperiores quasi exercitationem, deserunt odio duc
+                    imus! Sunt ipsum vel nihil sint.
+                </p>
+            </div>
+        </div>
+        
+    </div>
+    
+    <script type="text/javascript" src="vanilla-tilt.js"></script>
+
+    <script type="text/javascript">
+            VanillaTilt.init(document.querySelectorAll(".box"), {
+                max: 25,
+                speed: 400
+            });
+            
+    </script>
+</body>
+</html>

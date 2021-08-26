@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>screach background</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column-reverse;
+        }
+        section.what
+        {
+            width: 100%;
+            min-height: 30vh;
+            background-color: #fd9d3e;
+            position: relative;
+            margin: 20px 0;
+        }
+        .what::before{
+            content: "";
+            width: 100%;
+            height: 20vh;
+            background: url("./order-top.png") no-repeat white bottom center;
+            position: absolute;
+            top: -1px;
+            border: none;
+            background-size: cover;
+        }
+        .what::after{
+            content: "";
+            width: 100%;
+            height: 20vh;
+            background: url("./order-bottom.png") no-repeat white bottom center;
+            position: absolute;
+            background-size: cover;
+            bottom: -1px;
+            border: none;
+        }
+        .what .card{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 350px;
+            height: 450px;
+            color: black;
+        }
+        .what .card .content{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        
+        /* gallery */
+        section.gallery{
+            width: 93.5%;
+            min-height: 30vh;
+            background-color: #121619;
+            position: relative;
+            overflow: hidden;
+            margin: 20px 0;
+            padding: 60px ;
+            overflow: hidden;
+            border: none;
+            color: #fd9d3e;
+            
+        }
+        section.gallery span{
+            width: 100%;
+            min-height: 50%;
+            background-image: url("./chef-top-bg.png");
+            background-position: bottom;
+            background-repeat: no-repeat;
+            position: absolute;
+            left: -5px;
+            top: -60px;
+        }
+            section.gallery::before{
+                content: "";
+                background-image: url("./chef-bg.png");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                opacity: 0.2;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border: none;
+            }
+            section.gallery::after{
+                content: "";
+                background: url("./chef-top-bg.png") top;
+                width: 100%;
+                min-height: 50%;
+                background-position: top;
+                background-repeat: no-repeat;
+                position: absolute;
+                left: -0.4vw;
+                bottom: -60px;
+                border: none;
+            }
+            @media (max-width:1110px)
+            {
+                section.gallery::after{
+                    bottom: -75px;
+                }
+                section.gallery span{
+                    top: -75px;
+                }
+            }
+    </style>
+</head>
+<body>
+    <section class="what">
+        <div class="card">
+            <div class="content">
+                <h2>scrach </h2>
+                <p>
+                    Lorem ipsum dolor sit amet.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem provident est dolorem aperiam itaque ea?
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, nobis? Porro eaque id impedit? Numquam alias porro corrupti expedita quis.
+
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery">
+        <span></span>
+        <div class="card">
+            <div class="content">
+                <h2>scrach </h2>
+                <p>
+                    Lorem ipsum dolor sit amet.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem provident est dolorem aperiam itaque ea?
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, nobis? Porro eaque id impedit? Numquam alias porro corrupti expedita quis.
+
+                </p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
